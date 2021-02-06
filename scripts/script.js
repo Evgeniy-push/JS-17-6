@@ -1,18 +1,17 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
 
-    let number,
-        divineNumber,
-        guess = 0;
+    let guess = 0;
 
-    number = Math.floor(Math.random()*(100 - 1) + 1);
-    console.log('number: ', number);
 
     let isNamber = n => {
         return !isNaN(parseFloat(n)) && isFinite(n);
     };
 
-    divineNumber = () => {
+    const divineNumber = () => {
+
+        let number = Math.floor(Math.random()*(100 - 1) + 1);
+        console.log('number1: ', number);
 
         let divine = prompt('Угадай число от 1 до 100');
 
