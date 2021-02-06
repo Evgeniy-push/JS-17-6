@@ -1,18 +1,20 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
 
-    let number = 50,
-        divine,
+    let number,
         divineNumber,
         guess = 0;
+
+    number = Math.floor(Math.random()*(100 - 1) + 1);
+    console.log('number: ', number);
 
     let isNamber = n => {
         return !isNaN(parseFloat(n)) && isFinite(n);
     };
 
     divineNumber = () => {
-        divine = prompt('Угадай число от 1 до 100');
-        console.log('divine: ', divine);
+
+        let divine = prompt('Угадай число от 1 до 100');
 
         if(+divine > number){
             alert("Загаданное число меньше");
